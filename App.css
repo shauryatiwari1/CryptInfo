@@ -1,18 +1,14 @@
 
 body::before {
-    content: ""; /* Required to display pseudo-element */
-    position: fixed; /* Fixed position so it stays in place while scrolling */
-    top: 0; /* Start from the top of the viewport */
-    left: 0; /* Stick to the very left of the viewport */
-    width: 4mm; /* Width of the strip */
-    height: 100vh; /* Full viewport height */
-    background-color: #4946d3; /* Dark gray color */
-    z-index: 9999; /* Ensure it's on top of all other elements */
+    content: ""; 
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 4mm; 
+    height: 100vh; 
+    background-color: #4946d3; 
+    z-index: 9999; 
 }
-
-
-
-
 .ant-layout {
     background-color: black !important;
     color: white !important;
@@ -47,31 +43,28 @@ input::placeholder {
     color: white !important;
 }
 .ant-card {
-    background-color: #333 !important; /* Card background */
-    color: white !important; /* Card text */
+    background-color: #333 !important; 
+    color: white !important; 
 }
 .ant-input {
-    background-color: #222 !important; /* Dark background for input */
-    color: white !important;          /* White text for visibility */
-    border-color: #555 !important;    /* Border to match dark theme */
+    background-color: #222 !important; 
+    color: white !important;        
+    border-color: #555 !important;   
 }
 
 .ant-input::placeholder {
-    color: #aaa !important; /* Grey placeholder text */
+    color: #aaa !important;
 }
-/* Style the Select dropdown text */
 .ant-select-selector {
-    background-color: #333 !important; /* Dark background */
-    color: white !important; /* White text */
-    border: 1px solid #555 !important; /* Light border for contrast */
+    background-color: #333 !important; 
+    color: white !important; 
+    border: 1px solid #555 !important; 
 }
 
-/* Style the options inside the dropdown */
 .ant-select-item-option {
     background-color: #444 !important;
 }
 
-/* Change hover color for options to differentiate them */
 .ant-select-item-option:hover {
     background-color: #555 !important;
     color: white !important;
