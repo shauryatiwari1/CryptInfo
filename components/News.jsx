@@ -3,7 +3,7 @@ import { Row, Col, Card, Typography } from 'antd';
 import moment from 'moment';
 
 const { Title, Text } = Typography;
-
+//news api needs premium plan now maybe so demo news for showing
 const demoNews = [
   {
     name: 'Bitcoin Breaks $60,000 Again!',
