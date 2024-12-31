@@ -3,7 +3,7 @@ import { Row, Col, Card, Typography } from 'antd';
 import moment from 'moment';
 
 const { Title, Text } = Typography;
-//news api needs premium plan now maybe so demo news for showing
+// news api needs premium plan now maybe so demo news for showing
 const demoNews = [
   {
     name: 'Bitcoin Breaks $60,000 Again!',
@@ -105,29 +105,27 @@ const demoNews = [
   },
 ];
 
-const News = () => {
-  return (
-    <Row gutter={[24, 24]}>
-      {demoNews.map((news, i) => (
-        <Col xs={24} sm={12} lg={8} key={i}>
-          <Card hoverable className="news-card">
-            <div className="news-image-container">
-              <Title className="news-title" level={4}>
-                {news.name}
-              </Title>
+const News = () => (
+  <Row gutter={[24, 24]}>
+    {demoNews.map((news, i) => (
+      <Col xs={24} sm={12} lg={8} key={i}>
+        <Card hoverable className="news-card">
+          <div className="news-image-container">
+            <Title className="news-title" level={4}>
+              {news.name}
+            </Title>
+          </div>
+          <p>{news.description.length > 100 ? `${news.description.substring(0, 100)}...` : news.description}</p>
+          <div className="provider-container">
+            <div>
+              <Text className="provider-name">{news.provider[0]?.name}</Text>
             </div>
-            <p>{news.description.length > 100 ? `${news.description.substring(0, 100)}...` : news.description}</p>
-            <div className="provider-container">
-              <div>
-                <Text className="provider-name">{news.provider[0]?.name}</Text>
-              </div>
-              <Text>{moment(news.datePublished).startOf('ss').fromNow()}</Text>
-            </div>
-          </Card>
-        </Col>
-      ))}
-    </Row>
-  );
-};
+            <Text>{moment(news.datePublished).startOf('ss').fromNow()}</Text>
+          </div>
+        </Card>
+      </Col>
+    ))}
+  </Row>
+);
 
 export default News;
